@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+  </head>
+  <body>
+    <h1 id='title'>Discover How Much Money You Can Save On Your Cell Phone Bills...</h1>
+    <div id='calculator'>
+      <ol>
+        <li>
+          <div>
+            <p class='head'>Number of active cell phone plans in your family:</p>
+            <input id='plansCount' class='input right-margin-inset-border' value='1'>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class='head'>Your monthly payment (including all fees and taxes):</p>
+            <input id='monthlyPayment' class='input inset-border'>
+            <div id='checkboxes'>
+              <label><input type='checkbox' id='perPhone'>Per phone</label><br>
+              <label><input type='checkbox' id='allPhones'>All phones</label>
+            </div>
+            <div id='checkboxesPlaceholder'></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p id='longest-head' class='head'>Your monthly payment for long distance calls (if not in above):</p>
+            <input id='longDistance' class='input inset-border' readonly>
+            <div id='checkboxesLongDistance'>
+              <label><input type='checkbox' id='perPhoneLongDistance'>Per phone</label><br>
+              <label><input type='checkbox' id='allPhonesLongDistance'>All phones</label>
+            </div>
+            <div id='checkboxesLongDistancePlaceholder'></div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class='head'>Your monthly expense:</p>
+            <p id='monthlyExpense' class='right-margin-inset-border inputFixedHeight'></p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <p class='head'>Your yearly expense:</p>
+            <p id='yearlyExpense' class='right-margin-inset-border inputFixedHeight'></p>
+          </div>
+        </li>
+        <li class='red'>
+          <div>
+            <p class='head'>Your current expense for nine years:</p>
+            <p id='nineYearExpense' class='right-margin-inset-border inputFixedHeight'></p>
+          </div>
+        </li>
+        <li id='viewDetailsLi'>
+          <div>
+            <div id='headDiv'>
+              <b>Your NEW expense for nine years using our amazing technology:</b>
+              <button id='viewDetailsButtonTop' class='viewDetailsButton' type='button'>View details</button>
+            </div>
+            <p id='newNineYearExpense' class='right-margin-inset-border inputFixedHeight'></p>
+          </div>
+          <div id='detailsContainer'>
+            <ul id='detailsList'>
+              <li class='detailLi'>
+                <div>
+                  <label id='simCardsLabel' class='detailLabel'>SIM cards: $ 500 x</label>
+                  <input id='simCardsCount' class='detailInput'>
+                  <p id='simCardsSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <input id='transferCheckbox' class='detailCheckbox' type='checkbox'>
+                  <label id='transferLabel' class='detailLabel' for='transferCheckbox'>Transfer your current number:</label>
+                  <input id='transferCount' class='detailInput'>
+                  <p id='transferSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <input id='newPhoneCheckbox' class='detailCheckbox' type='checkbox'>
+                  <label id='newPhoneLabel' class='detailLabel' for='newPhoneCheckbox'>New GSM LTE enabled phone:</label>
+                  <input id='newPhoneCount' class='detailInput' hidden='true'>
+                  <p id='newPhoneSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <input id='shippingFeesCheckbox' class='detailCheckbox' type='checkbox'>
+                  <label id='shippingFeesLabel' class='detailLabel' for='shippingFeesCheckbox'>Shipping & handling fees:</label>
+                  <p id='shippingFeesSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <input id='stateCheckbox' class='detailCheckbox' type='checkbox'>
+                  <label id='stateLabel' class='detailLabel' for='state'>Sales taxes (estimated):</label>
+                  <select id='stateSelect'>
+                    <option value='0'>Select</option>
+                  </select>
+                  <p id='stateSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <input id='cancelFeesCheckbox' class='detailCheckbox' type='checkbox'>
+                  <label class='detailLabel' for='cancelFeesCheckbox'>Fees to cancel current contract(s):</label>
+                  <input id='cancelFeesAmount' class='detailInput' value='$ 0'>
+                  <p id='cancelFeesAmountMultiplySign' class='detailInput'>x</p>
+                  <p id='cancelFeesCount'></p>
+                  <p id='cancelFeesSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+              <li class='detailLi'>
+                <div>
+                  <label id='totalLabel' class='detailLabel' for='totalCheckbox' ><b>Total</b></label>
+                  <p id='detailsTotalSum' class='detailSums inputFixedHeight'></p>
+                </div>
+              </li>
+            </ul>
+            <button id='viewDetailsButtonBottom' class='viewDetailsButton' type='button'>Hide details</button>
+          </div>
+        </li>
+        <li class='green'>
+          <div>
+            <p class='head'>Your savings during this period:</p>
+            <p id='nineYearSaving' class='right-margin-inset-border inputFixedHeight'></p>
+          </div>
+        </li>
+        <li class='green final-li big-font'>
+          <div>
+            <p class='head big-font'>Your savings per year:</p>
+            <p id='yearlySaving' class='right-margin-inset-border inputFixedHeight big-font'></p>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <h2 id='additional-info'>Click here to learn how to eliminate your cell phone bills for nine years...</h2>
+
+    <script src="calc.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+body { background-color: white; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
+#calculator { margin-top: 20px; width: 837px; background-color: white; border-radius: 30px; border-style: solid; border-width: 1px; }
+.red { color: red }
+.green { color: green; }
+ol { width: 100%; }
+li { height: 70px; font-weight: bold; }
+#viewDetailsLi { min-height: 70px; font-weight: bold; height: max-content; width: max-content; }
+.final-li { height: auto; }
+p { display: inline; margin: auto; }
+.right-margin-inset-border, .inset-border { border-style: inset; border-width: 1px; width: 145px; padding: 10px 0px 10px 15px; font-weight: bold; }
+.right-margin-inset-border { margin-right: 110px; }
+.inset-border { margin-right: 10px; }
+.head { width: max-content; min-width: 525px; font-size: 16px; font-weight: bold; }
+.headDetails { width: max-content; min-width: 200px; font-size: 12px; margin-right: 10px; }
+.big-font { font-size: 18px; }
+div { display: flex; }
+#checkboxes, #checkboxesLongDistance { min-width: 100px; display: none; }
+#checkboxesPlaceholder, #checkboxesLongDistancePlaceholder { min-width: 100px; display: block; }
+label { font-size: 13px; }
+#title { text-align: center; margin-top: 20px; }
+#additional-info { margin: 20px 30% 0% 30%; padding: 5px 12px; text-align: left; font-weight: normal; border-style: solid; border-width: 1px; border-radius: 30px; }
+.input { width: 162px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px;}
+#monthlyPayment { background-color: white }
+#longDistance { background-color: #eaeaea }
+.inputFixedHeight { height: 15px; }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+#headDiv { margin: auto; display: block; width: 525px; }
+.viewDetailsButton { color: blue; border-width: 0px; background-color: white; outline: none; display: block; margin-top: 10px; margin-left: 30% }
+#detailsContainer { margin-top: 10px; }
+#newNineYearExpense { margin-top: 0px; }
+#detailsList { list-style-type: none; }
+.detail, .detailLabel { margin-right: 5px; }
+.detailLabel, .detailSums { font-weight: normal; }
+.detailSums { width: 145px; font-size: 12px; position: absolute; margin-left: 375px; }
+#detailsTotalSum { font-weight: bold; }
+.detailLi { height: 30px; }
+.detailInput { height: min-content; width: 65px; display: none; padding-left: 2px; }
+#simCardsCount, #simCardsSum { display: block; }
+#simCardsCount { width: 90px; }
+#totalLabel, #simCardsLabel { margin-left: 21.8px; } /* as much as a checkbox */
+#viewDetailsButtonBottom, #stateSelect, #stateSum { display: none }
+#cancelFeesAmountMultiplySign { margin: 2px 5px; width: 10px; font-size: 13px; font-weight: normal; }
+#cancelFeesAmount { width: 50px; }
+.detailCheckbox { margin-top: 1px; }
+#cancelFeesCount { margin-left: 2px; margin-top: 1px; font-weight: normal; font-size: 14px; }
+#viewDetailsButtonTop { display: none }
+#newPhoneCount, #transferCount { border: none; }
+
+/* hide scrollbar */
+html { overflow: scroll; overflow-x: hidden; }
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb { background: #FF0000; }
